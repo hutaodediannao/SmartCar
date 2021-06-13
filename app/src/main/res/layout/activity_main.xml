@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/up"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg"
+            android:clickable="true"
+            android:padding="30dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/up"
+            android:onClick="handEvent"
+            android:text="前进" />
+
+        <ImageButton
+            android:id="@+id/down"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/bg"
+            android:clickable="true"
+            android:padding="30dp"
+            android:rotation="180"
+            android:scaleType="centerInside"
+            android:src="@mipmap/up"
+            android:onClick="handEvent"
+            android:text="后退" />
+
+        <ImageButton
+            android:id="@+id/left"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical|left"
+            android:background="@drawable/bg"
+            android:clickable="true"
+            android:padding="30dp"
+            android:rotation="270"
+            android:scaleType="centerInside"
+            android:onClick="handEvent"
+            android:src="@mipmap/up" />
+
+        <ImageButton
+            android:id="@+id/right"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/bg"
+            android:clickable="true"
+            android:padding="30dp"
+            android:rotation="90"
+            android:scaleType="centerInside"
+            android:onClick="handEvent"
+            android:src="@mipmap/up" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/s1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:text="警示灯开关"
+            android:checked="true"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:onClick="handEvent"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/s2"
+            android:visibility="gone"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:text="闪烁模式"
+            android:checked="false"
+            android:onClick="handEvent"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_red_light"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:text="红色灯光"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:onClick="handEvent"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv2"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_green_light"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:text="绿色灯光"
+            android:onClick="handEvent"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv3"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_blue_light"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:text="蓝色灯光"
+            android:onClick="handEvent"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv4"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_orange_dark"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:text="黄色灯光"
+            android:onClick="handEvent"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="胡氏智能车-4G远程操控"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnShaChe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="#EDEDED"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:text="紧急刹车"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="17sp"
+        android:onClick="handEvent"
+        android:textStyle="bold" />
+
+</RelativeLayout>
